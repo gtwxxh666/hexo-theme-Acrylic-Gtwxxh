@@ -1,27 +1,33 @@
-if theme.aside.card_author.enable
-  .card-widget.card-info
-    .is-center
-      .avatar-img
-        img(src=url_for(theme.avatar.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
-      .author-info__name= config.author
-      .author-info__description!= theme.aside.card_author.description || config.description
-
-    .card-info-data.site-data.is-center
-      a(href=url_for(config.archive_dir) + '/')
-        .headline= _p('aside.articles')
-        .length-num= site.posts.length
-      a(href=url_for(config.tag_dir) + '/')
-        .headline= _p('aside.tags')
-        .length-num= site.tags.length
-      a(href=url_for(config.category_dir) + '/')
-        .headline= _p('aside.categories') 
-        .length-num= site.categories.length
-
-    if theme.aside.card_author.button.enable
-      a#card-info-btn(href=theme.aside.card_author.button.link)
-        i(class=theme.aside.card_author.button.icon)
-        span=theme.aside.card_author.button.text
-  
-    if(theme.social)
-        .card-info-social-icons.is-center
-          !=fragment_cache('social', function(){return partial('includes/header/social')}) 
+.card-widget.card-info
+      .card-content
+        .card-info-avatar.is-center
+          .author-info__sayhi#author-info__sayhi 晚上好！我是
+          .author-info__name= config.author
+          .author-info__description
+            | 这有关于
+            b 产品、设计、开发
+            | 相关的问题和看法，还有
+            b 文章翻译
+            | 和
+            b 分享
+            | 。
+          .author-info__description2
+            | 相信你可以在这里找到对你有用的
+            b 知识
+            | 和
+            b 教程
+            | 。
+      .banner-button-group
+        a.banner-button(onclick='pjax.loadUrl("/about/")', data-pjax-state)
+          i.fas.fa-circle-chevron-right
+          span.banner-button-text 了解更多
+      a.button--animated#card-info-btn(target='_blank', rel='noopener external nofollow', href='https://github.com/zhheo')
+        i.fab.fa-github
+        span Github
+      .card-info-social-icons.is-center
+        a.social-icon(href='https://dribbble.com/zhheo', rel='external nofollow', target='_blank', title='Dribbble')
+          i.fa-brands.fa-dribbble
+        a.social-icon(href='https://github.com/zhheo', rel='external nofollow', target='_blank', title='Github')
+          i.fab.fa-github
+		  
+script(type='text/javascript' src='/js/cardauthor.js')

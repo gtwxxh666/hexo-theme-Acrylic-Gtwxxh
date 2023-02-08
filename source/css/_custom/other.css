@@ -1,0 +1,28 @@
+/* 全局超链接 */
+a {
+  color: var(--heo-fontcolor);
+}
+
+a:hover {
+  color: var(--heo-hovertext);
+}
+
+/* 分割线 */
+hr {
+  display: none;
+}
+/* 其他页面封面移除 */
+.not-index-bg {
+  height: 2rem !important;
+  background-image: none !important;
+  background-color: var(--heo-none) !important;
+}
+
+
+.not-index-bg img {
+  display: none;
+}
+
+.not-index-bg #page-site-info {
+  display: none;
+}

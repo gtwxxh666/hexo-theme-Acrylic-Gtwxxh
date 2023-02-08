@@ -1,17 +1,84 @@
-#footer-wrap
-  if theme.footer.owner.enable
-    - var now = new Date()
-    - var nowYear = now.getFullYear()
-    if theme.footer.owner.since && theme.footer.owner.since != nowYear
-      .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By ${config.author}`
-    else
-      .copyright!= `&copy;${nowYear} By ${config.author}`
-  if theme.footer.copyright
-    .framework-info
-      span= _p('footer.framework') + ' '
-      a(href='https://hexo.io')= 'Hexo'
-      span.footer-separator |
-      span= _p('footer.theme') + ' '
-      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
-  if theme.footer.custom_text
-    .footer_custom_text!=`${theme.footer.custom_text}`
+#footer_deal
+  a.deal_link(href="mailto:shine.yulingle@gmail.com" title="mail")
+    svg.icon.footer-mail.iconfont.icon-youjian(onclick=`mailto:shine.yulingle@gmail.com`,title="mail")
+      use(xlink:href="#icon-youjian")
+  a.deal_link(href="https://github.com/Shineyull" title="github"  target="_blank")
+    svg.icon.footer-github.iconfont.icon-github(onclick=`https://github.com/Shineyull`,title="github")
+      use(xlink:href="#icon-github")
+  img.footer_mini_logo.entered.loading(style="border-radius:50%" src='https://tucdn.wpon.cn/2023/02/08/b96926895d8bb.webp' onclick="btf.scrollToDest(0,500)" title="Go top")
+  a.deal_link(href="https://dribbble.com/shineyu" title="dribbble")
+    svg.icon.footer-dribbble.iconfont.icon-dribbble-circle-fill(onclick=`https://dribbble.com/shineyu`,title="dribbble")
+      use(xlink:href="#icon-dribbble-circle-fill")
+  a.deal_link(href="https://www.pinterest.com/shineyulingle/" title="pinterest" target="_blank")
+    svg.icon.footer-pinterest.iconfont.icon-pinterestpinterest30(onclick=`https://www.pinterest.com/shineyulingle/`,title="pinterest")
+      use(xlink:href="#icon-pinterestpinterest30")
+#Jay-footer
+  .footer-group
+    h3.footer-title 推荐✨
+    .footer-links
+      a.footer-item(href="/about/") 我的主页
+      a.footer-item(href="/music/") 我的音乐
+      a.footer-item(href="/mybook/") 我的书籍
+  .footer-group
+    h3.footer-title 生活
+    .footer-links
+      a.footer-item(href="/categories/生活/") 生活页面
+      a.footer-item(href="/video/") 视频播放
+  .footer-group
+    h3.footer-title 网站
+    .footer-links
+      a.footer-item(href="https://shineyu.cn/") 个人主页
+      a.footer-item(href="/link/") 友情链接
+  .footer-group
+    h3.footer-title 导航
+    .footer-links
+      a.footer-item(href="/myshared") 分享页面
+      a.footer-item(href="/atom.xml") RSS订阅
+  .footer-group
+    h3.footer-title 协议
+    .footer-links
+      a.footer-item(href="/privacy/") 隐私协议
+      a.footer-item(href="/cookies/") Cookies
+      a.footer-item(href="/cc/") 版权协议
+  .footer-group
+    h3.footer-title
+      | 友链 
+      button(
+        href="javascript:;"
+        onclick="flink_random.randomLink()"
+        title="换一批"
+        class="fa-rotate-righ-button"
+      )
+        i.fa-rotate-right.fa-solid
+    .footer-links#friend-links-in-footer
+      a.footer-item(href="")
+      a.footer-item(href="")
+      a.footer-item(href="")
+      a.footer-item(href="")
+      a.footer-item(href="")
+      a.footer-item(data-pjax-state="" href="/link/") 查看更多
+#footer-banner
+  .footer-banner-links
+    .footer-banner-left
+        #footer-banner-tips
+          .copyright ©2022 - 2023 By 
+            a.footer-banner-link(
+              href="/"
+              rel="external nofollow"
+              target="_blank"
+            )= config.author
+        //- script(src='https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js')
+        //- script.
+        //-   var typed = new Typed("#footer-banner-tips", {
+        //-     strings: ["Hi, I'm Shine.", "Never forget, there will be echoes."],
+        //-     startDelay: 200,
+        //-     backDelay: 2000,
+        //-     typeSpeed: 100,
+        //-     loop: true,
+        //-     backSpeed: 20
+        //-   })
+
+    .footer-banner-right
+      a.footer-banner-link(href="/atom.xml" title="RSS") 订阅
+      a.footer-banner-link(href="/about/" title="about") 关于
+      a.footer-banner-link.cc(href="/cc/" title="ccProtocol") 协议
