@@ -3,15 +3,25 @@
 # --------------------------------------
 
 menu:
-  # Home: / || fas fa-home
-  # Archives: /archives/ || fas fa-archive
-  # Tags: /tags/ || fas fa-tags
-  # Categories: /categories/ || fas fa-folder-open
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
-  # Link: /link/ || fas fa-link
-  # About: /about/ || fas fa-heart
+  文档||:
+    归档: /archives/ || 
+    标签: /tags/ || 
+    分类: /categories/ || 
+  专栏||:
+    魔改: /categories/魔改/ || 
+    声明: /license/ || 
+    短文: /memos/ || 
+    监控: https://gtcjkt.nuoxnuo.eu.org/ || 
+  清单||:
+    音乐: /music/ || 
+    照片: /Gallery/ || 
+    日志: /rz/ || 
+    电影: /movies/ || 
+  站点||:
+    留言: /comments/ || 
+    友链: /link/ || 
+    鱼塘: /fcircle/ || 
+    关于: /about/ || 
 
 nav:
   logo: # image
@@ -92,7 +102,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img:
+index_img: false
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
@@ -808,14 +818,14 @@ note:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
     # - xxxx
     # - xxxx
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: true
 
 # Snackbar (Toast Notification 彈窗)
@@ -880,7 +890,15 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    # - <script src="xxxx"></script>
+    - <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script async data-pjax src="/js/anzhiyu.js"></script>
+    - <script async data-pjax src="/js/heo.js"></script>
+    - <script async data-pjax src="/js/flink_random.js"></script>
+    - <script async data-pjax src="/js/blogex.js"></script>
+    - <script async data-pjax src="/js/anzhiyufunction.js"></script>
+    - <script async src="/js/anzhiyuOnlyOne.js"></script>
+    - <script src="/heo/random.js"></script>
+    - <script type="text/javascript" src="/js/rightmenu.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -947,9 +965,9 @@ CDN:
     # fontawesomeV6:
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
-    # aplayer_css:
-    # aplayer_js:
-    # meting_js:
+    aplayer_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css
+    aplayer_js: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
+    meting_js: https://pan.anzhiy.cn/d/anzhiyu/js/Meting2.min.js
     # prismjs_js:
     # prismjs_lineNumber_js:
     # prismjs_autoloader:

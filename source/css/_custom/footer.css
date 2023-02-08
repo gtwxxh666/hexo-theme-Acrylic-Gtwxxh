@@ -35,7 +35,7 @@ div#footer_deal {
 a.deal_link {
     display: flex;
     margin: 1rem 27px;
-    color: #000;
+    color: #fff;
     border-radius: 3rem;
     width: 32px;
     height: 32px;
@@ -46,7 +46,7 @@ a.deal_link {
 }
 
 a.deal_link:hover {
-    color: #000;
+    color: #fff !important;
     background: #425AEF
 }
 
@@ -95,7 +95,7 @@ img.footer_mini_logo:hover {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    z-index: 1
+    z-index: 100;
 }
 
 @media screen and (max-width: 768px) {
