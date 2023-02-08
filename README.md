@@ -3,7 +3,7 @@
   中文
 </div>
 
-# hexo-theme-hexo-theme-btf-heo
+# hexo-theme-hexo-theme-Acrylic
 
 ![1](https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-2/561ba70e-8697-4982-a57f-203aaa7d7667.png)
 ![2](https://tucdn.wpon.cn/2023/02/08/16fa1019080c7.png)
@@ -22,7 +22,7 @@
 在博客根目录里安装稳定版【推荐】
 
 ```powershell
-git clone -b main https://github.com/timigomen/hexo-theme-btf-heo.git themes/heo
+git clone -b main https://github.com/timigomen/hexo-theme-Acrylic.git themes/Acrylic
 ```
 
 ### npm 安裝
@@ -47,7 +47,7 @@ theme: heo
 - macos/linux
 在博客根目录运行
 ```bash
-cp -rf ./themes/heo/_config.yml ./_config.heo.yml
+cp -rf ./themes/heo/_config.yml ./_config.Acrylic.yml
 ```
 - windows
-复制```/themes/heo/_config.yml```此文件到hexo根目录，并重命名为```_config.heo.yml```
+复制```/themes/heo/_config.yml```此文件到hexo根目录，并重命名为```_config.Acrylic.yml```
