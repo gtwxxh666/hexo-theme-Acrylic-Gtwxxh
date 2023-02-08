@@ -31,10 +31,10 @@ git clone -b main https://github.com/timigomen/hexo-theme-Acrylic.git themes/Acr
 
 ## ⚙ 应用主题
 
-修改hexo配置文件`_config.yml`，把主题改为`heo`
+修改hexo配置文件`_config.yml`，把主题改为`Acrylic`
 
 ```
-theme: heo
+theme: Acrylic
 ```
 
 >如果你没有pug以及stylus的渲染器，请下载安装： ```npm install hexo-renderer-pug hexo-renderer-stylus --save```
